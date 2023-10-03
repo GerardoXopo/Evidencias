@@ -1,0 +1,70 @@
+//LOCAL FUNTIONS (FUNCIONES LOCALES)
+
+fun main() {
+    val base=20f
+    val altura=4f
+    val ancho = 2f
+
+
+    val userValidated=login("Juanito","Navaja")//Utiliza la funcion y guarda el resultado
+    println("Usuario loggeado? $userValidated")//Imprime si el usuario esta iniciado
+
+//Corre area rectangulo con los valores por defecto
+    println("Area con valores por defecto: ${rectangleArea()}")
+
+//Area de rectangulo con base seteada y altura por defecto
+    println("Area con altura por defecto: ${rectangleArea(10.0)}")
+
+//Setear base y altura con named arguments
+    println("Area con datos determinados con named arguments: ${rectangleArea(height=2.0,base=3.5)}")
+
+    val area= areaRectangulo(base,altura)
+    println("El area del rectangulo es $area")
+
+    val volumen = volumenPrisma(base,altura,ancho)
+    println("El valor del prisma es $volumen")
+
+    val imprimir=imprimir()
+    println("$imprimir")
+
+    val promedio = promedio(tercera=10f)
+    println("El promedio del alumno es: $promedio")
+
+}
+
+fun login(user: String, password: String): Boolean{
+    fun validate(input:String ): Boolean {
+        if(input.isEmpty()){
+            return false
+        }
+        return true
+    }
+    val userValidated=validate(user)
+    val passValidated=validate(password)
+
+    return userValidated && passValidated
+}
+
+fun rectangleArea(base:Double =20.0, height:Double=30.0):Double{
+    return base*height
+}
+
+fun areaRectangulo(base: Float, altura: Float):Float{
+    return base*altura
+}
+
+fun volumenPrisma(base: Float, altura:Float, ancho:Float):Float{
+    return areaRectangulo(base,altura)*ancho
+}
+fun imprimir(
+    valor:String = "Este es el primer valor por defecto",
+    valor2: String= "Este es el segundo valor por defecto"){
+    println(valor)
+    println(valor2)
+}
+
+fun promedio(primera:Float =8f,
+             segunda:Float = 8f,
+             tercera:Float):Float{
+    return (primera + segunda + tercera)/3f
+}
