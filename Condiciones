@@ -1,0 +1,32 @@
+//CONDICIONES
+fun main() {
+    val triangulo=tipoDeTriangulo(lado1=3,lado2=3,lado3=3)
+    println(triangulo)
+
+    val tipo=tipoDeDato(dato=1)
+    println(tipo)
+
+}
+
+fun tipoDeTriangulo(lado1:Int,lado2:Int,lado3:Int){
+
+    if(lado1==lado2 && lado2==lado3){
+        println("Es un triangulo equilatero")
+    }else if(
+        (lado1==lado2 && lado3 !=lado1 )||
+        (lado2==lado3 && lado1 !=lado2 )||
+        (lado3==lado1 && lado2 !=lado3 ) ){
+        println("Es un triangulo isoceles")
+    }else{
+        println("Es un triangulo escaleno")
+    }
+}
+
+fun tipoDeDato(dato:Any){
+    when(dato){
+        is String -> println("Es un String")
+        is Int -> println ("Es un Entero")
+        is Double -> println("Es un Doble")
+        else -> println("Tipo de dato no soportado")
+    }
+}
