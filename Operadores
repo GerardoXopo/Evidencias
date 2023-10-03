@@ -1,0 +1,32 @@
+//OPERADORES
+
+import kotlin.math.pow
+const val PI=3.1516f
+const val PHI=1.618f
+fun main() {
+    val decimal=10f
+    val perimetro= 2*PI*decimal
+    val y2=-2f
+    val y1=3
+    val x2=-3
+    val x1=4
+    val radius=4f
+    val area=circleArea(radius)
+    val m=(y2-y1)/(x2-x1)
+
+    println("El perimetro del circulo es: $perimetro")
+    println(m)
+    println("el area del circulo es: $area")
+    println(getPi())
+    printPhi()
+}
+
+fun circleArea(radius:Float):Float{
+    return PI*radius.pow(2)
+}
+fun getPi(): Float{
+    return PI
+}
+fun printPhi(){
+    println("El número áureo vale $PHI")
+}

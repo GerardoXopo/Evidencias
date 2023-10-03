@@ -1,2 +1,0 @@
-# Evidencias
-Fundamentos de Kotlin
