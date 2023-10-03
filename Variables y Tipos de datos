@@ -1,0 +1,15 @@
+//VARIABLES Y TIPOS DE DATOS
+const val pi=3.1516
+fun main() {
+    val dec=10
+    val flot=dec.toFloat()
+    var pe:Double=0.00
+
+
+    pe=pi*(dec*2)
+
+    println("variable decimal: $dec")
+    println("variable decimal a flotante: $flot")
+    println("Perimetro del circulo: $pe")
+
+}
